@@ -2,383 +2,251 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joseph Kibera | Full Stack & Cloud Developer</title>
-  <meta name="description" content="Full Stack & Cloud Developer (Laravel, Azure, Dynamics 365 APIs). Building secure enterprise systems and integrations." />
-
-  <!-- Open Graph -->
+  <meta name="description" content="Joseph Kibera builds secure enterprise systems with Laravel, Azure, and Dynamics 365 integrations." />
   <meta property="og:title" content="Joseph Kibera | Full Stack & Cloud Developer" />
-  <meta property="og:description" content="Laravel • Azure • Dynamics 365 APIs • Enterprise Systems • Secure Portals • REST APIs" />
+  <meta property="og:description" content="Enterprise portals, APIs, Microsoft Azure, and Dynamics 365 integrations." />
   <meta property="og:type" content="website" />
 
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    :root {
+      --bg: #0b1220;
+      --paper: #f8fafc;
+      --ink: #0f172a;
+      --line: #1e293b;
+      --muted: #94a3b8;
+      --accent: #ef4444;
+      --accent-2: #22d3ee;
+    }
+
     html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Manrope", sans-serif;
+      color: #e2e8f0;
+      background: var(--bg);
+    }
+
+    h1, h2, h3, .display {
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .paper {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid #111827;
+      border-radius: 1.8rem;
+      box-shadow: 0 20px 50px rgba(2, 6, 23, 0.25);
+    }
+
+    .glass {
+      background: rgba(15, 23, 42, 0.68);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 1.5rem;
+    }
+
+    .name-ghost {
+      position: absolute;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: clamp(3rem, 14vw, 10rem);
+      line-height: 1;
+      opacity: 0.07;
+      pointer-events: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .bg-name-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .bg-name-layer .name-ghost {
+      position: fixed;
+    }
+
+    .name-top { top: 3.5rem; left: 1rem; }
+    .name-bottom { right: 1rem; bottom: 2rem; }
   </style>
 </head>
+<body>
+  <div class="bg-name-layer" aria-hidden="true">
+    <span class="name-ghost name-top">Joseph</span>
+    <span class="name-ghost name-bottom">Kibera</span>
+  </div>
 
-<body class="bg-slate-950 text-slate-100">
-  <!-- Top Nav -->
-  <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="font-semibold tracking-tight">
-        Joseph <span class="text-sky-400">Kibera</span>
-      </a>
-
-      <nav class="hidden md:flex gap-6 text-sm text-slate-200">
-        <a class="hover:text-white" href="#about">About</a>
-        <a class="hover:text-white" href="#skills">Skills</a>
-        <a class="hover:text-white" href="#projects">Projects</a>
-        <a class="hover:text-white" href="#proof">Proof</a>
-        <a class="hover:text-white" href="#contact">Contact</a>
+  <header class="fixed left-0 right-0 top-0 z-50 px-4 pt-4">
+    <div class="paper mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+      <a href="#home" class="display text-lg font-bold">Joseph <span class="text-red-500">Kibera</span></a>
+      <nav class="hidden gap-6 text-sm font-medium md:flex">
+        <a href="#about" class="hover:text-red-500">About</a>
+        <a href="#systems" class="hover:text-red-500">Systems</a>
+        <a href="#proof" class="hover:text-red-500">Proof</a>
+        <a href="#contact" class="hover:text-red-500">Contact</a>
       </nav>
-
-      <div class="flex items-center gap-2">
-        <a
-          class="rounded-xl border border-slate-800 px-3 py-1.5 text-sm hover:bg-slate-900"
-          href="#contact"
-        >Hire me</a>
-      </div>
+      <a href="mailto:jokibira@gmail.com" class="rounded-xl border border-slate-900 px-4 py-2 text-sm font-semibold hover:bg-slate-100">Email Me</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="mx-auto max-w-6xl px-4 pt-12 pb-10">
-    <div class="grid gap-10 md:grid-cols-2 md:items-center">
-      <div class="space-y-5">
-        <p class="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/30 px-3 py-1 text-xs text-slate-200">
-          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-          Available for Full Stack / Integration roles
-        </p>
-
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
-          Full Stack & Cloud Developer
-          <span class="block text-slate-300 text-2xl md:text-3xl font-semibold mt-2">
-            Laravel • Azure • Dynamics 365 APIs
-          </span>
-        </h1>
-
-        <p class="text-slate-300 leading-relaxed">
-          I build secure, high-performance enterprise portals and integrations.
-          I work daily with Microsoft Azure (VMs, Azure AD), Dynamics 365 APIs, and Laravel REST APIs.
-        </p>
-
-        <div class="flex flex-wrap gap-3">
-          <a class="rounded-xl bg-sky-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-sky-400"
-             href="#projects">View Projects</a>
-
-          <!-- Replace with your CV PDF link once uploaded to the repo -->
-          <a class="rounded-xl border border-slate-800 px-4 py-2 text-sm font-semibold hover:bg-slate-900"
-             href="./Joseph_Kibera_CV.pdf" target="_blank" rel="noopener">
-            Download CV
-          </a>
-        </div>
-
-        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
-          <a class="hover:text-white" href="mailto:jokibira@gmail.com">jokibira@gmail.com</a>
-          <span class="text-slate-600">•</span>
-          <a class="hover:text-white" href="tel:+254114511439">+254 114 511 439</a>
-          <span class="text-slate-600">•</span>
-          <span>Nairobi, Kenya</span>
-        </div>
-      </div>
-
-      <div class="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900/70 to-slate-950 p-6 shadow-xl">
-        <h2 class="text-lg font-semibold">Quick Highlights</h2>
-        <div class="mt-4 grid gap-3">
-          <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
-            <p class="text-sm text-slate-300">Current role</p>
-            <p class="font-semibold">ICT Lead / Lead Software Developer</p>
-            <p class="text-sm text-slate-300">Pioneer International University</p>
-          </div>
-
-          <div class="grid grid-cols-2 gap-3">
-            <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
-              <p class="text-sm text-slate-300">Cloud</p>
-              <p class="font-semibold">Azure VMs • Azure AD</p>
-            </div>
-            <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
-              <p class="text-sm text-slate-300">Integration</p>
-              <p class="font-semibold">Dynamics 365 APIs</p>
-            </div>
-          </div>
-
-          <div class="rounded-2xl border border-slate-800 bg-slate-900/40 p-4">
-            <p class="text-sm text-slate-300">API Development</p>
-            <p class="font-semibold">Laravel REST APIs • Postman</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="mx-auto max-w-6xl px-4 py-10">
-    <div class="grid gap-6 md:grid-cols-3">
-      <div class="md:col-span-1">
-        <h2 class="text-2xl font-bold">About</h2>
-        <p class="mt-2 text-slate-300">
-          Enterprise systems builder with hands-on cloud, identity management, and API integration experience.
-        </p>
-      </div>
-      <div class="md:col-span-2">
-        <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-          <p class="text-slate-300 leading-relaxed">
-            I design and maintain institutional platforms, build REST APIs using Laravel,
-            integrate Microsoft Dynamics 365 APIs, and manage Azure infrastructure (VM provisioning, software deployment).
-            I also support staff systems and access controls through Azure Active Directory (RBAC).
+  <main id="home" class="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-36">
+    <section class="relative overflow-hidden rounded-[2rem] border border-slate-700/40 bg-slate-950/40 px-5 pb-10 pt-8 md:px-8" data-aos="fade-up">
+      <div class="relative z-10 grid gap-8 md:grid-cols-5 md:items-center">
+        <div class="md:col-span-3">
+          <p class="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs font-semibold text-cyan-200">
+            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+            ICT Lead / Lead Software Developer
           </p>
 
-          <div class="mt-5 grid gap-3 md:grid-cols-2">
-            <div class="rounded-2xl border border-slate-800 bg-slate-950/40 p-4">
-              <p class="font-semibold">What I’m great at</p>
-              <ul class="mt-2 list-disc pl-5 text-sm text-slate-300 space-y-1">
-                <li>Laravel portals & admin systems</li>
-                <li>REST API design & integration</li>
-                <li>Azure VM provisioning & deployments</li>
-                <li>Identity & access (Azure AD, RBAC)</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl border border-slate-800 bg-slate-950/40 p-4">
-              <p class="font-semibold">What I’m building toward</p>
-              <ul class="mt-2 list-disc pl-5 text-sm text-slate-300 space-y-1">
-                <li>More CI/CD (GitHub Actions)</li>
-                <li>Containerization (Docker)</li>
-                <li>Enterprise integration patterns</li>
-                <li>Clean architecture & testing depth</li>
-              </ul>
-            </div>
+          <h1 class="display mt-4 text-4xl font-bold leading-tight md:text-6xl">
+            Enterprise systems. Cloud infrastructure. Real institutional impact.
+          </h1>
+
+          <p class="mt-4 max-w-2xl text-lg text-slate-300">
+            I design and ship secure portals, REST APIs, and Microsoft cloud integrations using Laravel, Azure, and Dynamics 365 APIs.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#systems" class="rounded-xl bg-red-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-400">View My Work</a>
+            <a href="mailto:jokibira@gmail.com" class="rounded-xl border border-slate-500 px-5 py-2.5 text-sm font-semibold hover:bg-slate-800">Hire Me</a>
           </div>
 
+          <div class="mt-5 text-sm text-slate-300">
+            <a href="mailto:jokibira@gmail.com" class="font-semibold hover:text-white">jokibira@gmail.com</a>
+            <span class="mx-2 text-slate-500">|</span>
+            <span>Nairobi, Kenya</span>
+            <span class="mx-2 text-slate-500">|</span>
+            <a href="https://www.linkedin.com/in/joseph-k-a435771a5" target="_blank" rel="noopener" class="hover:text-white">LinkedIn URL</a>
+          </div>
         </div>
+
+        <aside class="md:col-span-2 space-y-3">
+          <article class="rounded-[1.8rem] border border-slate-700 bg-amber-100 p-5 text-slate-900" data-aos="fade-left" data-aos-delay="100">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Now</p>
+            <h2 class="display mt-2 text-xl font-bold">Pioneer International University</h2>
+            <p class="mt-1 text-sm">ICT Lead / Lead Software Developer</p>
+          </article>
+          <article class="rounded-[1.8rem] border border-slate-700 bg-rose-100 p-5 text-slate-900" data-aos="fade-left" data-aos-delay="180">
+            <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Core Stack</p>
+            <p class="mt-2 text-sm font-semibold">Laravel, PHP, MySQL, REST APIs, Azure, Azure AD, Dynamics 365 APIs</p>
+          </article>
+        </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="mx-auto max-w-6xl px-4 py-10">
-    <h2 class="text-2xl font-bold">Skills</h2>
-    <p class="mt-2 text-slate-300">A quick snapshot of tools I use daily.</p>
-
-    <div class="mt-6 grid gap-4 md:grid-cols-3">
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <h3 class="font-semibold">Full Stack</h3>
-        <div class="mt-3 flex flex-wrap gap-2 text-sm">
-          <span class="rounded-full border border-slate-800 px-3 py-1">Laravel</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">PHP</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">MySQL</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">REST APIs</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">HTML5</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">JavaScript</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">Tailwind</span>
-        </div>
-      </div>
-
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <h3 class="font-semibold">Cloud & Identity</h3>
-        <div class="mt-3 flex flex-wrap gap-2 text-sm">
-          <span class="rounded-full border border-slate-800 px-3 py-1">Azure Portal</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">Azure VMs</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">Azure AD</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">RBAC</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">Windows/Linux</span>
-        </div>
-      </div>
-
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <h3 class="font-semibold">Integrations & Delivery</h3>
-        <div class="mt-3 flex flex-wrap gap-2 text-sm">
-          <span class="rounded-full border border-slate-800 px-3 py-1">Dynamics 365 APIs</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">Postman</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">Git</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">GitHub</span>
-          <span class="rounded-full border border-slate-800 px-3 py-1">SSL/DNS</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="mx-auto max-w-6xl px-4 py-10">
-    <div class="flex items-end justify-between gap-4">
-      <div>
-        <h2 class="text-2xl font-bold">Projects</h2>
-        <p class="mt-2 text-slate-300">Add links/screenshots as you publish them.</p>
-      </div>
-      <a class="text-sm text-sky-400 hover:text-sky-300" href="#contact">Want a demo? →</a>
-    </div>
-
-    <div class="mt-6 grid gap-4 md:grid-cols-2">
-
-      <!-- Project Card Template -->
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <h3 class="text-lg font-semibold">University Internal Portal</h3>
-        <p class="mt-2 text-sm text-slate-300">
-          Secure staff portal with role-based access, dashboards, and workflow features.
-        </p>
-        <ul class="mt-3 text-sm text-slate-300 list-disc pl-5 space-y-1">
-          <li>Laravel + MySQL</li>
-          <li>RBAC + authentication middleware</li>
-          <li>Deployed on Azure VM</li>
-        </ul>
-
-        <div class="mt-4 flex flex-wrap gap-2">
-          <!-- Replace # with your repo link if public -->
-          <a class="rounded-xl border border-slate-800 px-3 py-1.5 text-sm hover:bg-slate-900"
-             href="#" target="_blank" rel="noopener">GitHub</a>
-          <!-- Replace # with a live demo link if available -->
-          <a class="rounded-xl border border-slate-800 px-3 py-1.5 text-sm hover:bg-slate-900"
-             href="#" target="_blank" rel="noopener">Live Demo</a>
-        </div>
+    <section id="about" class="mt-12 grid gap-4 md:grid-cols-3">
+      <article class="glass p-6" data-aos="fade-up" data-aos-delay="60">
+        <p class="text-xs uppercase tracking-wide text-slate-400">Current</p>
+        <h3 class="display mt-2 text-xl font-bold">Pioneer International University</h3>
+        <p class="mt-2 text-sm text-slate-300">ICT Lead / Lead Software Developer</p>
+        <p class="mt-2 text-sm text-slate-400">Dec 2025 - Present</p>
       </article>
-
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <h3 class="text-lg font-semibold">Graduation Portal</h3>
-        <p class="mt-2 text-sm text-slate-300">
-          Graduation workflow system for approvals, student records, and communication.
-        </p>
-        <ul class="mt-3 text-sm text-slate-300 list-disc pl-5 space-y-1">
-          <li>Laravel REST endpoints + admin views</li>
-          <li>Data validation and audit-friendly workflows</li>
-          <li>Production support and enhancements</li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <a class="rounded-xl border border-slate-800 px-3 py-1.5 text-sm hover:bg-slate-900"
-             href="#" target="_blank" rel="noopener">Case Study</a>
-        </div>
+      <article class="glass p-6" data-aos="fade-up" data-aos-delay="120">
+        <p class="text-xs uppercase tracking-wide text-slate-400">Previous</p>
+        <h3 class="display mt-2 text-xl font-bold">Research & Innovation Hub</h3>
+        <p class="mt-2 text-sm text-slate-300">Research Assistant, Systems Development</p>
+        <p class="mt-2 text-sm text-slate-400">Nov 2023 - Nov 2025</p>
       </article>
-
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <h3 class="text-lg font-semibold">Dynamics 365 Integration</h3>
-        <p class="mt-2 text-sm text-slate-300">
-          Daily use of Dynamics 365 APIs for enterprise workflows and data synchronization.
-        </p>
-        <ul class="mt-3 text-sm text-slate-300 list-disc pl-5 space-y-1">
-          <li>API consumption patterns</li>
-          <li>Secure auth/token handling</li>
-          <li>Error handling and logging</li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <a class="rounded-xl border border-slate-800 px-3 py-1.5 text-sm hover:bg-slate-900"
-             href="#" target="_blank" rel="noopener">Notes</a>
-        </div>
+      <article class="glass p-6" data-aos="fade-up" data-aos-delay="180">
+        <p class="text-xs uppercase tracking-wide text-slate-400">Foundation</p>
+        <h3 class="display mt-2 text-xl font-bold">Pioneer Group of Schools</h3>
+        <p class="mt-2 text-sm text-slate-300">Full Stack Web Development Intern</p>
+        <p class="mt-2 text-sm text-slate-400">Feb 2024 - Feb 2025</p>
       </article>
+    </section>
 
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <h3 class="text-lg font-semibold">Azure VM Deployments</h3>
-        <p class="mt-2 text-sm text-slate-300">
-          Provisioned and managed Azure VMs for hosting and enterprise software deployments.
-        </p>
-        <ul class="mt-3 text-sm text-slate-300 list-disc pl-5 space-y-1">
-          <li>VM provisioning and environment setup</li>
-          <li>Windows/Linux configuration</li>
-          <li>Deployment, SSL, DNS</li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <a class="rounded-xl border border-slate-800 px-3 py-1.5 text-sm hover:bg-slate-900"
-             href="#" target="_blank" rel="noopener">Architecture</a>
+    <section id="systems" class="mt-12" data-aos="fade-up">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 class="display text-3xl font-bold">Systems I Built</h2>
+          <p class="mt-2 text-slate-300">University and school systems delivered in production.</p>
         </div>
+        <a href="mailto:jokibira@gmail.com" class="text-sm font-semibold text-cyan-300 hover:text-cyan-200">Request full walkthrough</a>
+      </div>
+
+      <div class="mt-5 grid gap-4 md:grid-cols-2">
+        <article class="glass p-5" data-aos="zoom-in-up" data-aos-delay="80">
+          <h3 class="display text-lg font-bold">University Platforms</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300">
+            <li><a class="hover:text-white" href="https://piu.ac.ke" target="_blank" rel="noopener">piu.ac.ke</a> - Main website</li>
+            <li><a class="hover:text-white" href="https://graduation.piu.ac.ke" target="_blank" rel="noopener">graduation.piu.ac.ke</a> - Graduation portal</li>
+            <li><a class="hover:text-white" href="https://portal.piu.ac.ke" target="_blank" rel="noopener">portal.piu.ac.ke</a> - Internal portal</li>
+            <li><a class="hover:text-white" href="https://repository.piu.ac.ke" target="_blank" rel="noopener">repository.piu.ac.ke</a> - Academic repository</li>
+            <li><a class="hover:text-white" href="https://stcw.piu.ac.ke" target="_blank" rel="noopener">stcw.piu.ac.ke</a> - Marine institute site</li>
+          </ul>
+        </article>
+
+        <article class="glass p-5" data-aos="zoom-in-up" data-aos-delay="150">
+          <h3 class="display text-lg font-bold">School Network Systems</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-300">
+            <li><a class="hover:text-white" href="https://pioneergroupofschools.co.ke" target="_blank" rel="noopener">pioneergroupofschools.co.ke</a> - Group website</li>
+            <li><a class="hover:text-white" href="https://humancapital.pioneergroupofschools.co.ke" target="_blank" rel="noopener">humancapital.pioneergroupofschools.co.ke</a> - HR portal</li>
+            <li><a class="hover:text-white" href="https://manageclinic.pioneergroupofschools.co.ke" target="_blank" rel="noopener">manageclinic.pioneergroupofschools.co.ke</a> - Clinic system</li>
+            <li><a class="hover:text-white" href="https://alumni.pioneergroupofschools.co.ke" target="_blank" rel="noopener">alumni.pioneergroupofschools.co.ke</a> - Alumni portal</li>
+            <li><a class="hover:text-white" href="https://myschool.pioneergroupofschools.co.ke" target="_blank" rel="noopener">myschool.pioneergroupofschools.co.ke</a> - Centralized platform</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="proof" class="mt-12" data-aos="fade-up">
+      <h2 class="display text-3xl font-bold">SEO Proof: Pioneer Blogspot</h2>
+      <div class="mt-5 grid gap-4 md:grid-cols-4">
+        <article class="rounded-[1.5rem] border border-slate-700 bg-cyan-100 p-5 text-slate-900" data-aos="flip-up" data-aos-delay="50">
+          <p class="text-xs uppercase tracking-wide text-slate-500">Total Clicks</p>
+          <p class="display mt-2 text-3xl font-bold">24,458</p>
+        </article>
+        <article class="rounded-[1.5rem] border border-slate-700 bg-emerald-100 p-5 text-slate-900" data-aos="flip-up" data-aos-delay="100">
+          <p class="text-xs uppercase tracking-wide text-slate-500">Impressions</p>
+          <p class="display mt-2 text-3xl font-bold">739,302</p>
+        </article>
+        <article class="rounded-[1.5rem] border border-slate-700 bg-amber-100 p-5 text-slate-900" data-aos="flip-up" data-aos-delay="150">
+          <p class="text-xs uppercase tracking-wide text-slate-500">Average CTR</p>
+          <p class="display mt-2 text-3xl font-bold">3.31%</p>
+        </article>
+        <article class="rounded-[1.5rem] border border-slate-700 bg-rose-100 p-5 text-slate-900" data-aos="flip-up" data-aos-delay="200">
+          <p class="text-xs uppercase tracking-wide text-slate-500">Date Range</p>
+          <p class="mt-2 text-sm font-semibold">Oct 19, 2024 - Feb 18, 2026</p>
+        </article>
+      </div>
+
+    </section>
+
+    <section id="contact" class="mt-12" data-aos="fade-up">
+      <article class="paper p-8 text-center" data-aos="zoom-in">
+        <h2 class="display text-3xl font-bold">Let's Build Something Useful</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-slate-700">
+          If you need a developer who can ship full stack systems, handle cloud infrastructure, and integrate enterprise APIs, email me.
+        </p>
+        <a href="mailto:jokibira@gmail.com" class="mt-6 inline-block rounded-xl bg-slate-900 px-6 py-3 font-semibold text-white hover:bg-slate-800">jokibira@gmail.com</a>
       </article>
+    </section>
+  </main>
 
-    </div>
-  </section>
-
-  <!-- Proof / Metrics -->
-  <section id="proof" class="mx-auto max-w-6xl px-4 py-10">
-    <h2 class="text-2xl font-bold">Proof & Metrics</h2>
-    <p class="mt-2 text-slate-300">Real performance numbers from SEO/analytics work.</p>
-
-    <div class="mt-6 grid gap-4 md:grid-cols-3">
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <p class="text-slate-300 text-sm">Google Search Impressions</p>
-        <p class="mt-2 text-3xl font-bold">739K+</p>
-        <p class="mt-2 text-xs text-slate-400">Search Console export</p>
-      </div>
-
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <p class="text-slate-300 text-sm">Organic Clicks</p>
-        <p class="mt-2 text-3xl font-bold">24K+</p>
-        <p class="mt-2 text-xs text-slate-400">Search Console export</p>
-      </div>
-
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <p class="text-slate-300 text-sm">Organic Share</p>
-        <p class="mt-2 text-3xl font-bold">~78%</p>
-        <p class="mt-2 text-xs text-slate-400">Google Analytics channel mix</p>
-      </div>
-    </div>
-
-    <div class="mt-4 rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-      <p class="font-semibold">SEO Case Study (Pioneer Blogspot)</p>
-      <p class="mt-2 text-sm text-slate-300">
-        Built a custom-coded platform and scaled organic discovery through technical SEO, content structure,
-        metadata, internal linking, and performance monitoring using Search Console & Analytics.
-      </p>
-      <!-- Optional: add a PDF/screenshots folder and link here -->
-      <p class="mt-3 text-sm">
-        <a class="text-sky-400 hover:text-sky-300" href="#" target="_blank" rel="noopener">
-          Add screenshots / exports (optional)
-        </a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="mx-auto max-w-6xl px-4 py-10">
-    <h2 class="text-2xl font-bold">Contact</h2>
-    <p class="mt-2 text-slate-300">Reach out for roles, collaborations, or demos.</p>
-
-    <div class="mt-6 grid gap-4 md:grid-cols-2">
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <p class="text-sm text-slate-300">Email</p>
-        <a class="mt-1 block text-lg font-semibold hover:text-sky-300" href="mailto:jokibira@gmail.com">
-          jokibira@gmail.com
-        </a>
-
-        <p class="mt-4 text-sm text-slate-300">Phone</p>
-        <a class="mt-1 block text-lg font-semibold hover:text-sky-300" href="tel:+254114511439">
-          +254 114 511 439
-        </a>
-
-        <p class="mt-4 text-sm text-slate-300">Location</p>
-        <p class="mt-1 text-lg font-semibold">Nairobi, Kenya</p>
-      </div>
-
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/30 p-6">
-        <p class="text-sm text-slate-300">Links</p>
-
-        <!-- Replace these URLs with your real profiles -->
-        <div class="mt-3 space-y-3 text-sm">
-          <a class="block rounded-2xl border border-slate-800 px-4 py-3 hover:bg-slate-900"
-             href="https://github.com/" target="_blank" rel="noopener">
-            GitHub →
-            <span class="block text-xs text-slate-400">Add your username</span>
-          </a>
-          <a class="block rounded-2xl border border-slate-800 px-4 py-3 hover:bg-slate-900"
-             href="https://www.linkedin.com/" target="_blank" rel="noopener">
-            LinkedIn →
-            <span class="block text-xs text-slate-400">Add your profile</span>
-          </a>
-        </div>
-
-        <p class="mt-4 text-xs text-slate-400">
-          Tip: Keep at least one public repo with a clean README showing your API work (sanitized).
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-800">
-    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-400 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-      <p>© <span id="year"></span> Joseph Kibera. All rights reserved.</p>
-      <p class="text-slate-500">Built with HTML + Tailwind (GitHub Pages-ready).</p>
-    </div>
+  <footer class="border-t border-slate-700/40 py-8 text-center text-sm text-slate-400">
+    <p>(c) <span id="year"></span> Joseph Kibera. Inspired by premium portfolio systems.</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
+      offset: 80
+    });
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
